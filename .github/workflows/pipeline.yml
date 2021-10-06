@@ -49,3 +49,12 @@ jobs:
       with:
         recreate: true
         path: code-coverage-results.md
+
+  foo:
+
+    name: Executing inline script on a self-hosted runner
+    runs-on: self-hosted
+
+    steps:
+    - name: Run script
+      run: echo "hello world" && touch hello_world.txt
